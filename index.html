@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEMIA.CORP — Hub multimédia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&family=Playfair+Display:wght@400;700&family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-global: #0f0f0f;
+      --accent-global: #800000;
+      --bg-foutrac: #0f0f0f;
+      --accent-foutrac: #8a2be2;
+      --bg-matteo: #0f0f0f;
+      --accent-matteo: #d4af37;
+      --line:#333;
+      --txt:#f2f2f2;
+      --muted:#b5b5b5;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Playfair Display', serif;background:var(--bg-global);color:var(--txt);line-height:1.6}
+    header{padding:2.5rem 2rem;border-bottom:1px solid var(--line);background:var(--bg-global);color:var(--accent-global)}
+    h1{font-size:2.4rem;margin:0 0 .5rem;font-family:'Cinzel', serif;}
+    .lead{max-width:760px;color:var(--muted);font-family:'Playfair Display', serif;}
+    nav{position:sticky;top:0;background:rgba(15,15,15,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:1rem 2rem;overflow:auto}
+    nav a{color:var(--txt);text-decoration:none;padding:.5rem .8rem;border-radius:10px;border:1px solid transparent}
+    nav a:hover{border-color:var(--line);background:var(--bg-global)}
+    main{padding:2rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .card{border:1px solid var(--line);background:var(--bg-global);border-radius:16px;padding:1.2rem;text-decoration:none;color:var(--txt);transition:transform .2s;font-family:'Playfair Display', serif}
+    .card:hover{border-color:#666;transform:translateY(-2px)}
+    .icon{font-size:1.6rem}
+    section{margin:3rem 0}
+    h2{font-size:1.6rem;margin-bottom:.5rem;font-family:'Uncial Antiqua', cursive;}
+    .tags span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.2rem .6rem;margin:.2rem;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:2rem;color:#888;font-family:'Playfair Display', serif}
+    .pill{display:inline-block;background:var(--accent-global);color:#000;border-radius:999px;padding:.2rem .6rem;font-weight:bold}
+    .carousel{display:flex;overflow-x:auto;gap:1rem;scroll-snap-type:x mandatory;padding:1rem 0}
+    .carousel .card{min-width:220px;scroll-snap-align:start}
+    #foutrac .card, #foutrac h2, #foutrac .pill {background:var(--bg-foutrac);color:var(--accent-foutrac);font-family:'Uncial Antiqua', cursive;}
+    #projets, #ecouter, #regarder, #lire, #voir, #associatif {background:var(--bg-global)}
+    #matteo .card, #matteo h2, #matteo .pill {background:var(--bg-matteo);color:var(--accent-matteo);font-family:'Cinzel', serif;}
+    audio, video {width:100%; border-radius:12px;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>KEMIA.CORP</h1>
+  <p class="lead">Hub multimédia global. Toutes mes activités artistiques et associatives, éclectiques et stylisées.</p>
+</header>
+<nav>
+  <ul>
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#foutrac">Foutrac</a></li>
+    <li><a href="#ecouter">À écouter</a></li>
+    <li><a href="#regarder">À regarder</a></li>
+    <li><a href="#lire">À lire</a></li>
+    <li><a href="#voir">À voir</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#associatif">Associatif</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<main id="accueil">
+  <section>
+    <div class="grid">
+      <a class="card" href="#ecouter"><div class="icon">🎧</div><h3>À écouter</h3><p>Émissions, podcasts, créations sonores.</p></a>
+      <a class="card" href="#regarder"><div class="icon">🎥</div><h3>À regarder</h3><p>Vidéos, montages, captations.</p></a>
+      <a class="card" href="#lire"><div class="icon">📝</div><h3>À lire</h3><p>Textes, chroniques, notes.</p></a>
+      <a class="card" href="#foutrac"><div class="icon">📡</div><h3>Foutrac</h3><p>Section de l’émission phare, archives et playlists.</p></a>
+      <a class="card" href="#projets"><div class="icon">🧩</div><h3>Projets</h3><p>Artistiques, transversaux, en cours.</p></a>
+      <a class="card" href="#associatif"><div class="icon">🧑‍🤝‍🧑</div><h3>Associatif</h3><p>Actions culturelles, ateliers.</p></a>
+    </div>
+  </section>
+  <section id="foutrac">
+    <h2>📡 Foutrac <span class="pill">cœur</span></h2>
+    <p>Émission radio, laboratoire sonore et terrain d’exploration.</p>
+    <div class="carousel">
+      <div class="card">
+        <h3>Dernier épisode</h3>
+        <p>🎧 Écoute locale</p>
+        <audio controls>
+          <source src="media/dernier_episode.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas l’audio.
+        </audio>
+        <div class="tags"><span>radio</span><span>éclectique</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="matteo">
+    <h2>🎤 Matteo Amalfi <span class="pill">Chant & Théâtre</span></h2>
+    <div class="carousel">
+      <div class="card"><h3>Chant</h3><p>Performances, projets musicaux</p></div>
+      <div class="card"><h3>Théâtre</h3><p>Captations et créations scéniques</p></div>
+    </div>
+  </section>
+</main>
+<footer>
+  KEMIA.CORP — plateforme de création et de diffusion.
+</footer>
+</body>
+</html>
